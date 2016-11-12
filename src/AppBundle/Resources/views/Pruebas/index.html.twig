@@ -1,0 +1,33 @@
+{% extends "AppBundle:Pruebas/layouts:layout.html.twig" %}
+{% block body %}
+    {{texto}}
+    <br> {{colores.azul}}
+
+    {% if users|length > 0 %}
+        <ul>
+            {% for user in users %}
+                <li>{{ user.name }} - {{ user.old }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% set fecha = date("0 days", "America/Bogota") %}
+    {{ dump(fecha)|raw }}
+    <br>
+
+    {{ fecha|date('d-m-Y') }}
+    <br>
+
+
+    {{ max([99, 100, 75]) }}
+    <br>
+
+    {{ min([99, 100, 75]) }}
+    <br>
+
+    {{ random(1000) }}
+
+    {% include('AppBundle::footer.html.twig') %}
+    <hr>
+    {{ generateTable(4, 12)|raw }}
+{% endblock %}

@@ -1,0 +1,8 @@
+pruebas_index:
+    path: /{lang}/hola/{name}/{page}
+    defaults: {_controller: AppBundle:Pruebas:index, lang:es, name:null, page:null}
+    methods: [GET, POST]
+    requirements:
+        name: \w+
+        page: \d+
+        lang: es|en

@@ -1,0 +1,33 @@
+mi_homepage:
+  path:     /
+  defaults: { _controller: MiBundle:Default:index }
+create_curso:
+  path:     /create/
+  defaults: { _controller: MiBundle:Default:create }
+read_curso:
+  path:     /read/
+  defaults: { _controller: MiBundle:Default:read }
+update_curso:
+  path:     /update/{id}/{titulo}/{descripcion}/{precio}/
+  defaults: { _controller: MiBundle:Default:update }
+delete_curso:
+  path:     /delete/{id}/
+  defaults: { _controller: MiBundle:Default:delete }
+nativeSQL_curso:
+  path:     /nativeSQL/
+  defaults: { _controller: MiBundle:Default:nativeSQL }
+DQL_curso:
+  path:     /DQL/
+  defaults: { _controller: MiBundle:Default:DQL }
+QueryBuilder_curso:
+  path: /QueryBuilder/
+  defaults: {_controller: MiBundle:Default:QueryBuilder }
+QueryRepo_curso:
+  path: /QueryRepo/
+  defaults: {_controller: MiBundle:Default:QueryRepo }
+form_curso:
+  path: /form/
+  defaults: {_controller: MiBundle:Default:Form }
+ValidarEmail_curso:
+  path: /email/{email}
+  defaults: {_controller: MiBundle:Default:ValidarEmail }
