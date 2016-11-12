@@ -21,17 +21,17 @@ class CursoType extends AbstractType
     {
         $builder->add('titulo', TextType::class)
         ->add('descripcion', TextareaType::class)
-        // ->add('precio', TextType::class)
+        ->add('precio', TextType::class)
         // ->add('precio', ChoiceType::class, [
         //   'choices'=>[
         //     'male' =>'Hombre',
         //     'female' => 'Mujer'
         //   ]
         // ])
-        ->add('precio', CheckboxType::class, [
-          "label" => "Hola",
-          "required" => true
-        ])
+        // ->add('precio', CheckboxType::class, [
+        //   "label" => "Hola",
+        //   "required" => true
+        // ])
         ->add('Guardar', SubmitType::class);
     }
 

@@ -11,7 +11,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MiBundle:Default:index.html.twig');
+      $this->get('session')->set("sesion_prueba", "Hola");
+      $this->get('session')->remove("sesion_prueba");
+      return $this->render('MiBundle:Default:index.html.twig', [
+        'session' => $this->get('session')->get("sesion_prueba")
+      ]);
     }
 
     public function createAction()

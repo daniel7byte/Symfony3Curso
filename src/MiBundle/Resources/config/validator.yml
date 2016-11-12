@@ -3,8 +3,8 @@ MiBundle\Entity\Curso:
     titulo:
       - NotBlank: {message: "El titulo no puede estar vacio"}
       - Length:
-        min: 2
-        minMessage: "El titulo debe tener mas de dos caracteres"
+          min: 2
+          minMessage: "El titulo debe tener mas de dos caracteres"
     descripcion:
       - NotBlank: {message: "La descripcion ni puede estar vacia"}
     precio:
